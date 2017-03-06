@@ -1,49 +1,17 @@
-<div>
-    <div id="emulator">
-        <p>To play this game, please, download the latest Flash player!</p>
-        <br>
-        <a href="https://www.adobe.com/go/getflashplayer">
-            <img src="https://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png" alt="Get Adobe Flash player"/>
-        </a>
-    </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-
+<canvas id="nesbox-canvas"></canvas>	
 <script type="text/javascript">
+	var canvas = document.getElementById("nesbox-canvas");
+	var context = canvas.getContext("2d");
+	context.rect(0,0,300,150);
+	context.fillStyle = "black";
+	context.fill();
+	context.fillStyle = "white";
+	context.fillText("Loading emulator, please wait...", 10, 20);
 
-    var resizeOwnEmulator = function(width, height)
-    {
-        var emulator = $('#emulator');
-        emulator.css('width', width);
-        emulator.css('height', height);
-    }
-
-    $(function()
-    {
-        function embed()
-        {
-            var emulator = $('#emulator');
-            if(emulator)
-            {
-                var flashvars = 
-                {
-                    system : 'snes',
-                    url : 'https://dosboxonline.github.io/snes/e/earthworm-jim-2/earthworm-jim-2.zip'
-                };
-                var params = {};
-                var attributes = {};
-
-                params.allowscriptaccess = 'sameDomain';
-                params.allowFullScreen = 'true';
-                params.allowFullScreenInteractive = 'true';
-
-                swfobject.embedSWF('https://dosboxonline.github.io/flash/Nesbox.swf', 'emulator', '512', '448', '11.2.0', params, attributes);
-            }
-        }
-
-        embed();
-    });
-
+	var Module = 
+	{
+		canvas: document.getElementById('nesbox-canvas'),
+		rom: 'https://dosboxonline.github.io/snes/earthworm-jim-2.smc'
+	};
 </script>
+<script async type="text/javascript" src="https://dosboxonline.github.io/snes/nesbox.js"></script>
