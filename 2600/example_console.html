@@ -27,17 +27,17 @@
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new JSMESSLoader(JSMESSLoader.driver("a2600"),
-                                                   JSMESSLoader.nativeResolution(352, 223),
-                                                   JSMESSLoader.emulatorJS("emulators/jsmess/messa2600.js"),
-                                                   JSMESSLoader.mountFile("atari_2600_halo_2600.bin",
+                                  new JSMESSLoader(JSMESSLoader.driver("megadriv"),
+                                                   JSMESSLoader.nativeResolution(640, 424),
+                                                   JSMESSLoader.emulatorJS("emulators/jsmess/messmegadriv.js"),
+                                                   JSMESSLoader.mountFile("road-rash-2.gen",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "examples/atari_2600_halo_2600.bin")),
-                                                   JSMESSLoader.mountFile("a2600.cfg",
+                                                                                                 "examples/road-rash-2.gen")),
+                                                   JSMESSLoader.mountFile("megadriv.cfg",
                                                                           JSMESSLoader.fetchFile("Config File",
-                                                                                                 "examples/a2600.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "atari_2600_halo_2600.bin")))
-      emulator.setScale(3).start({ waitAfterDownloading: true });
+                                                                                                 "examples/megadriv.cfg")),
+                                                   JSMESSLoader.peripheral("cart", "road-rash-2.gen")))
+      emulator.setScale(3).start({ waitAfterDownloading: false });
     </script>
   </body>
 </html>
