@@ -21,18 +21,18 @@
   </head>
   <body>
     <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
-    <script type="text/javascript" src="es6-promise.js"></script>
-    <script type="text/javascript" src="browserfs.js"></script>
-    <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/browserfs.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
                                   new JSMESSLoader(JSMESSLoader.driver("megadriv"),
                                                    JSMESSLoader.nativeResolution(640, 424),
-                                                   JSMESSLoader.emulatorJS("emulators/jsmess/messmegadriv.js"),
+                                                   JSMESSLoader.emulatorJS("https://dosboxonline.github.io/2600/emulators/jsmess/messmegadriv.js"),
                                                    JSMESSLoader.mountFile("road-rash-2.gen",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "examples/road-rash-2.gen")),
+                                                                                                 "https://dosboxonline.github.io/2600/examples/road-rash-2.gen")),
                                                   
                                                    JSMESSLoader.peripheral("cart", "road-rash-2.gen")))
       emulator.setScale(3).start({ waitAfterDownloading: false });
