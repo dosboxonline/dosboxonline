@@ -714,8 +714,8 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'red',
-                                 background: 'transparent',
+     var defaultSplashColors = { foreground: 'black',
+                                 background: 'white',
                                  failure: 'red' };
      var splash = { loading_text: "",
                     spinning: true,
