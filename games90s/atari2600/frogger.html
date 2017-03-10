@@ -1,0 +1,10 @@
+<canvas id="canvas" style="width: 704px; height: 446px; display: block; margin: 0 auto;"></canvas>
+<script type="text/javascript" src="es6-promise.js"></script>
+<script type="text/javascript" src="browserfs.js"></script>
+<script type="text/javascript" src="loader.js"></script>
+<script type="text/javascript">
+   var emulator = new IALoader(document.querySelector("#canvas"),
+                                  "atari_2600_frogger_1982_parker_brothers_ed_english_david_lamkins_pb5300");
+   emulator.setScale(2);
+   emulator.start({ waitAfterDownloading: true });
+</script>
