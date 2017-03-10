@@ -52,18 +52,18 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("/images/ialogo.png"),
-                      mame: img("/images/mame.png"),
-                      mess: img("/images/mame.png"),
-                      dosbox: img("/images/dosbox.png"),
-                      sae: img("/images/sae.png")
+       var images = { ia: img("atari-2600.png"),
+                      mame: img("pixel.png"),
+                      mess: img("pixel.png"),
+                      dosbox: img("pixel.png"),
+                      sae: img("pixel.png")
                     };
      } else {
-       images = { ia: img("other_logos/ia-logo-150x150.png"),
-                  mame: img("other_logos/mame.png"),
-                  mess: img("other_logos/mame.png"),
-                  dosbox: img("other_logos/dosbox.png"),
-                  sae: img("other_logos/sae.png")
+       images = { ia: img("atari-2600.png"),
+                  mame: img("pixel.png"),
+                  mess: img("pixel.png"),
+                  dosbox: img("pixel.png"),
+                  sae: img("pixel.png")
                 };
      }
 
@@ -714,8 +714,8 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'white',
-                                 background: 'black',
+     var defaultSplashColors = { foreground: 'black',
+                                 background: 'white',
                                  failure: 'red' };
      var splash = { loading_text: "",
                     spinning: true,
@@ -951,7 +951,7 @@ var Module = null;
                       }
                       if (options.waitAfterDownloading) {
                         return new Promise(function (resolve, reject) {
-                                             splash.setTitle("Press any key to continue...");
+                                             splash.setTitle("Click here to continue...");
                                              splash.spinning = false;
 
                                              // stashes these event listeners so that we can remove them after
@@ -1200,7 +1200,7 @@ var Module = null;
        splash.titleElt.style.marginBottom = "1em";
        splash.titleElt.style.textAlign = 'center';
        splash.titleElt.style.font = "24px sans-serif";
-       splash.titleElt.textContent = " ";
+       splash.titleElt.textContent = " ";
        splash.splashElt.appendChild(splash.titleElt);
 
        var table = document.getElementById("dosbox-progress-indicator");
