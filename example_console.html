@@ -1,0 +1,43 @@
+<!-- The Emularity: An Example Console Loader -->
+<!-- For use with The Emularity, downloadable at http://www.emularity.com/ -->
+
+<!-- SIMPLE STEPS to trying an emulated console ("Halo 2600" for the Atari VCS) -->
+
+<!-- * Check out this repository in your browser-accessible directory;
+       this file as well as es6-promise.js, browserfs.js and loader.js are
+       required. The logo and images directories are optional, but the
+       splash screen looks quite a lot better when they're available. -->
+<!-- * Use "git annex get <file>" to download emulators/jsmess/messa2600.js.gz;
+       if you don't have git-annex you can download it from IA manually
+       (https://archive.org/download/emularity_engine_jsmame/messa2600.js.gz) -->
+<!-- * Download the Halo 2600 from https://archive.org/download/atari_2600_halo_2600/atari_2600_halo_2600.bin -->
+<!-- * Place the atari_2600_halo_2600.bin file in an "examples" subdirectory. -->
+<!-- * Visit your example_console.html file with a modern Javascript-capable browser. -->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>example console game</title>
+  </head>
+  <body>
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/browserfs.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/2600/loader.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new JSMESSLoader(JSMESSLoader.driver("a2600"),
+                                                   JSMESSLoader.nativeResolution(352, 223),
+                                                   JSMESSLoader.emulatorJS("https://dosboxonline.github.io/2600/messa2600.js"),
+                                                   JSMESSLoader.mountFile("atari_2600_halo_2600.bin",
+                                                                          JSMESSLoader.fetchFile("Game File",
+                                                                                                 "https://dosboxonline.github.io/2600/atari_2600_halo_2600.bin")),
+                                                   JSMESSLoader.mountFile("a2600.cfg",
+                                                                          JSMESSLoader.fetchFile("Config File",
+                                                                                                 "https://dosboxonline.github.io/2600/a2600.cfg")),
+                                                   JSMESSLoader.peripheral("cart", "atari_2600_halo_2600.bin")))
+      emulator.setScale(3).start({ waitAfterDownloading: true });
+    </script>
+  </body>
+</html>
