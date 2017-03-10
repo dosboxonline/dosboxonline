@@ -52,18 +52,18 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("/images/ialogo.png"),
-                      mame: img("/images/mame.png"),
-                      mess: img("/images/mame.png"),
-                      dosbox: img("/images/dosbox.png"),
-                      sae: img("/images/sae.png")
+       var images = { ia: img("gen-logo.png"),
+                      mame: img("gen-logo.png"),
+                      mess: img("gen-logo.png"),
+                      dosbox: img("gen-logo.png"),
+                      sae: img("gen-logo.png")
                     };
      } else {
-       images = { ia: img("other_logos/ia-logo-150x150.png"),
-                  mame: img("other_logos/mame.png"),
-                  mess: img("other_logos/mame.png"),
-                  dosbox: img("other_logos/dosbox.png"),
-                  sae: img("other_logos/sae.png")
+       images = { ia: img("gen-logo.png"),
+                  mame: img("gen-logo.png"),
+                  mess: img("gen-logo.png"),
+                  dosbox: img("gen-logo.png"),
+                  sae: img("gen-logo.png")
                 };
      }
 
