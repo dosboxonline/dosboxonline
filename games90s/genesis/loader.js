@@ -951,7 +951,7 @@ var Module = null;
                       }
                       if (options.waitAfterDownloading) {
                         return new Promise(function (resolve, reject) {
-                                             splash.setTitle("Press any key to continue...");
+                                             splash.setTitle("Click here to continue...");
                                              splash.spinning = false;
 
                                              // stashes these event listeners so that we can remove them after
