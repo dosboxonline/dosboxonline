@@ -52,18 +52,18 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("pixel.png"),
-                      mame: img("pixel.png"),
-                      mess: img("pixel.png"),
-                      dosbox: img("pixel.png"),
-                      sae: img("pixel.png")
+       var images = { ia: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                      mame: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                      mess: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                      dosbox: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                      sae: img("https://dosboxonline.github.io/games90s/pixel.png")
                     };
      } else {
-       images = { ia: img("pixel.png"),
-                  mame: img("pixel.png"),
-                  mess: img("pixel.png"),
-                  dosbox: img("pixel.png"),
-                  sae: img("pixel.png")
+       images = { ia: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                  mame: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                  mess: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                  dosbox: img("https://dosboxonline.github.io/games90s/pixel.png"),
+                  sae: img("https://dosboxonline.github.io/games90s/pixel.png")
                 };
      }
 
