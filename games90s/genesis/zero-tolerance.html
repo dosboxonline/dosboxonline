@@ -1,0 +1,10 @@
+<canvas id="canvas" style="width: 640px; height: 448px; display: block; margin: 0 auto;"></canvas>
+<script type="text/javascript" src="es6-promise.js"></script>
+<script type="text/javascript" src="browserfs.js"></script>
+<script type="text/javascript" src="loader.js"></script>
+<script type="text/javascript">
+   var emulator = new IALoader(document.querySelector("#canvas"),
+                                  "sg_Zero_Tolerance_Rev_1_1994_Accolade_Technopop_EU-US_en");
+   emulator.setScale(2);
+   emulator.start({ waitAfterDownloading: true });
+</script>
