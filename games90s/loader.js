@@ -52,18 +52,18 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("/images/ialogo.png"),
-                      mame: img("/images/mame.png"),
-                      mess: img("/images/mame.png"),
-                      dosbox: img("/images/dosbox.png"),
-                      sae: img("/images/sae.png")
+       var images = { ia: img("pixel.png"),
+                      mame: img("pixel.png"),
+                      mess: img("pixel.png"),
+                      dosbox: img("pixel.png"),
+                      sae: img("pixel.png")
                     };
      } else {
-       images = { ia: img("other_logos/ia-logo-150x150.png"),
-                  mame: img("other_logos/mame.png"),
-                  mess: img("other_logos/mame.png"),
-                  dosbox: img("other_logos/dosbox.png"),
-                  sae: img("other_logos/sae.png")
+       images = { ia: img("pixel.png"),
+                  mame: img("pixel.png"),
+                  mess: img("pixel.png"),
+                  dosbox: img("pixel.png"),
+                  sae: img("pixel.png")
                 };
      }
 
@@ -714,8 +714,8 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'white',
-                                 background: 'black',
+     var defaultSplashColors = { foreground: 'black',
+                                 background: 'transparent',
                                  failure: 'red' };
      var splash = { loading_text: "",
                     spinning: true,
