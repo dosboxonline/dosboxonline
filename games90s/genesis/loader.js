@@ -59,7 +59,7 @@ var Module = null;
                       sae: img("mess-logo.png")
                     };
      } else {
-       images = { ia: img("mess-logo.png"),
+       images = { ia: img("gen-logo.png"),
                   mame: img("mess-logo.png"),
                   mess: img("mess-logo.png"),
                   dosbox: img("mess-logo.png"),
