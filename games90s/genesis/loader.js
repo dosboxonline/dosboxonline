@@ -54,14 +54,14 @@ var Module = null;
      if (/archive\.org$/.test(document.location.hostname)) {
        var images = { ia: img("gen-logo.png"),
                       mame: img("pixel.png"),
-                      mess: img("pixel.png"),
+                      mess: img("mess-logo.png"),
                       dosbox: img("pixel.png"),
                       sae: img("pixel.png")
                     };
      } else {
        images = { ia: img("gen-logo.png"),
                   mame: img("pixel.png"),
-                  mess: img("pixel.png"),
+                  mess: img("mess-logo.png"),
                   dosbox: img("pixel.png"),
                   sae: img("pixel.png")
                 };
