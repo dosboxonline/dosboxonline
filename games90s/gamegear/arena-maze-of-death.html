@@ -1,0 +1,11 @@
+<canvas id="canvas" style="width: 320px; height: 288px; display: block; margin: 0 auto;"></canvas>
+<script type="text/javascript" src="es6-promise.js"></script>
+<script type="text/javascript" src="browserfs.js"></script>
+<script type="text/javascript" src="loader.js"></script>
+<script type="text/javascript">
+   var emulator = new IALoader(document.querySelector("#canvas"),
+                                  "gg_Arena_1995_Sega");
+   emulator.setScale(2);
+   emulator.start({ waitAfterDownloading: true });
+</script>
+Start-1 1-LCTrl 2-LAlt Pause-P
