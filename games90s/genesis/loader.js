@@ -715,7 +715,7 @@ var Module = null;
      var has_started = false;
      var loading = false;
      var defaultSplashColors = { foreground: 'black',
-                                 background: 'white',
+                                 background: '#eeeeee',
                                  failure: 'red' };
      var splash = { loading_text: "",
                     spinning: true,
