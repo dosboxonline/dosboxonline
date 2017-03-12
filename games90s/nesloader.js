@@ -3979,7 +3979,7 @@ var RetroJolt = (function () {
         var defaults = {
             scale: 1,
             target: '#emulator-target',
-            loadingImg: '/logo/nes-logo.png',
+            loadingImg: '',
         };
         var config = __assign({}, defaults, options);
         var romFile = RetroJolt.getFilenameFromUrl(config.rom);
