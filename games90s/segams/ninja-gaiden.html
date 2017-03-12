@@ -1,11 +1,15 @@
-<canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"></canvas>
-<script type="text/javascript" src="es6-promise.js"></script>
-<script type="text/javascript" src="browserfs.js"></script>
-<script type="text/javascript" src="loader.js"></script>
-<script type="text/javascript">
-   var emulator = new IALoader(document.querySelector("#canvas"),
-                                  "segasms_Ninja_Gaiden_1992_Sega_beta");
-   emulator.setScale(2);
-   emulator.start({ waitAfterDownloading: true });
-</script>
+<canvas id="emulator-target" style="width: 640px; height: 448; display: block; margin: 0 auto;"></canvas>
+		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript">
+			var emulator = new RetroJolt( {
+				loadingImg: '/games90s/segams-logo.png',
+				scale: 2,
+				js: '/games90s/mamegenesis.js',
+				driver: 'sms',
+				cfg: '/games90s/sms.cfg',
+				peripherals: [ 'cart' ],
+				resolution: [ 268, 224 ],
+				rom: '/games90s/segams/games/ninja-gaiden.sms',
+			} );
+		</script>
 1/Start-LCtrl 2-LAlt 1-Pause
