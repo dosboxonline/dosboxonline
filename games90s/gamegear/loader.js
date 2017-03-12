@@ -53,15 +53,15 @@ var Module = null;
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
        var images = { ia: img("gamegear-logo.png"),
-                      mame: img("mess-logo.png"),
-                      mess: img("mess-logo.png"),
+                      mame: img("gamegear-logo.png"),
+                      mess: img("gamegear-logo.png"),
                       dosbox: img("mess-logo.png"),
                       sae: img("mess-logo.png")
                     };
      } else {
        images = { ia: img("gamegear-logo.png"),
-                  mame: img("mess-logo.png"),
-                  mess: img("mess-logo.png"),
+                  mame: img("gamegear-logo.png"),
+                  mess: img("gamegear-logo.png"),
                   dosbox: img("mess-logo.png"),
                   sae: img("mess-logo.png")
                 };
@@ -951,7 +951,7 @@ var Module = null;
                       }
                       if (options.waitAfterDownloading) {
                         return new Promise(function (resolve, reject) {
-                                             splash.setTitle("Click here to continue...");
+                                             splash.setTitle("Click here to play");
                                              splash.spinning = false;
 
                                              // stashes these event listeners so that we can remove them after
@@ -999,7 +999,7 @@ var Module = null;
                         }
                       }
                       if (game_data.emulatorJS) {
-                        splash.setTitle("Launching Emulator");
+                        splash.setTitle("Launching Game");
                         return attach_script(game_data.emulatorJS);
                       } else {
                         splash.setTitle("Non-system disk or disk error");
