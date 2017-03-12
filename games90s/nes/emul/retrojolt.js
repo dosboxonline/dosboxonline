@@ -3274,9 +3274,9 @@ var Module = null;
         var drawloadingtimer;
         var has_started = false;
         var loading = false;
-        var defaultSplashColors = { foreground: 'white',
-            background: 'black',
-            failure: 'red' };
+        var defaultSplashColors = { foreground: '#333333',
+            background: '#fafafa',
+            failure: '#990000' };
         var splash = { loading_text: "",
             spinning: true,
             finished_loading: false,
