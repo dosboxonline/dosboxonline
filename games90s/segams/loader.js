@@ -999,7 +999,7 @@ var Module = null;
                         }
                       }
                       if (game_data.emulatorJS) {
-                        splash.setTitle("Launching Emulator");
+                        splash.setTitle("Launching Game");
                         return attach_script(game_data.emulatorJS);
                       } else {
                         splash.setTitle("Non-system disk or disk error");
