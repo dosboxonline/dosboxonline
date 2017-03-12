@@ -1,11 +1,15 @@
-<canvas id="canvas" style="width: 704px; height: 446px; display: block; margin: 0 auto;"></canvas>
-<script type="text/javascript" src="es6-promise.js"></script>
-<script type="text/javascript" src="browserfs.js"></script>
-<script type="text/javascript" src="loader.js"></script>
-<script type="text/javascript">
-   var emulator = new IALoader(document.querySelector("#canvas"),
-                                  "atari_2600_frogger_1982_parker_brothers_ed_english_david_lamkins_pb5300");
-   emulator.setScale(2);
-   emulator.start({ waitAfterDownloading: true });
-</script>
-Start/Reset-2 GameButton-LCtrl Dificulty-1 Pause-P
+<canvas id="emulator-target" style="width: 704px; height: 446px; display: block; margin: 0 auto;"></canvas>
+		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript">
+			var emulator = new RetroJolt( {
+				loadingImg: '/games90s/atari-2600.png',
+				scale: 2,
+				js: '/games90s/mamea2600.js',
+				driver:  'a2600',
+				cfg: '/games90s/a2600.cfg',
+				peripherals: [ 'cart' ],
+				resolution: [ 352, 223 ],
+				rom: '/games90s/atari2600/games/frogger.a26',
+			} );
+		</script>
+Start/Reset-2 GameButton-Space Dificulty-1 Pause-P
