@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+	</head>
+	<body>
+		<canvas id="emulator-target" style="width: 50%; height: 50%; display: block; margin: 0 auto;"></canvas>
+		<script type="text/javascript" src="../../build/retrojolt.js"></script>
+		<script type="text/javascript">
+			var emulator = new RetroJolt( {
+				loadingImg: '/games90s/snes-logo.png',
+				scale: 2,
+				js: '/games90s/mamesnes.js',
+				driver: 'snes',
+				bios: [ '/games90s/snes.zip' ],
+				cfg: '/games90s/snes.cfg',
+				peripherals: [ 'cart' ],
+				resolution: [ 256, 225 ],
+				rom: '/games90s/nes/games/hilda.sfc',
+			} );
+		</script>
+	</body>
+</html>
