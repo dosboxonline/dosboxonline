@@ -3274,7 +3274,7 @@ var Module = null;
         var drawloadingtimer;
         var has_started = false;
         var loading = false;
-        var defaultSplashColors = { foreground: 'transparent',
+        var defaultSplashColors = { foreground: '#333333',
             background: '#fafafa',
             failure: '#990000' };
         var splash = { loading_text: "",
@@ -3358,7 +3358,7 @@ var Module = null;
                 return false;
             has_started = true;
             if (typeof options !== 'object') {
-                options = { waitAfterDownloading: false };
+                options = { waitAfterDownloading: true };
             }
             var k, c, game_data;
             setupSplash(canvas, splash);
