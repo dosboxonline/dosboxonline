@@ -10,11 +10,14 @@
                                                    MAMELoader.emulatorJS("/games90s/mamemegadriv.js"),
                                                    MAMELoader.extraArgs("-nodrc")
                                                    MAMELoader.mountFile("doom-e.32x",
-                                                                          JSMESSLoader.fetchFile("Game File",
+                                                                          MAMELoader.fetchFile("Game File",
                                                                                                  "/games90s/32x/games/doom-e.32x")),
                                                    MAMELoader.mountFile("sms.cfg",
                                                                           MAMELoader.fetchFile("Config File",
                                                                                                  "/games90s/32x.cfg")),
+                                                   MAMELoader.mountFile("32x.zip",
+                                                                          MAMELoader.fetchFile("Bios File",
+                                                                                                 "/games90s/32x.zip")),
                                                    "-nodrc".peripheral("cart", "doom-e.32x")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
     </script>
