@@ -1,15 +1,15 @@
 <canvas id="emulator-target" style="width: 50%; height: 50%; display: block; margin: 0 auto;"></canvas>
-		<script type="text/javascript" src="retrojolt.js"></script>
+		<script type="text/javascript" src="https://dosboxonline.github.io/games90s/retrojolt.js"></script>
 		<script type="text/javascript">
 			var emulator = new RetroJolt( {
 				loadingImg: '/games90s/snes-logo.png',
 				scale: 2,
-				js: 'mamesms.js',
+				js: 'https://dosboxonline.github.io/games90s/mamesms.js',
 				driver: 'sms',
-				bios: [ 'sms.zip' ],
-				cfg: 'sms.cfg',
+				bios: [ 'https://dosboxonline.github.io/games90s/sms.zip' ],
+				cfg: 'https://dosboxonline.github.io/games90s/sms.cfg',
 				peripherals: [ 'cart' ],
 				resolution: [ 256, 225 ],
-				rom: '/games90s/segams/games/ninja-gaiden.sms',
+				rom: 'https://dosboxonline.github.io/games90s/segams/games/ninja-gaiden.sms',
 			} );
 		</script>
