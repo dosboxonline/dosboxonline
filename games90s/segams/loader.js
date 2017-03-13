@@ -52,16 +52,16 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("/games90s/segams-logo.png"),
-                      mame: img("/games90s/segams-logo.png"),
-                      mess: img("/games90s/segams-logo.png"),
+       var images = { ia: img("segams-logo.png"),
+                      mame: img("segams-logo.png"),
+                      mess: img("segams-logo.png"),
                       dosbox: img("mess-logo.png"),
                       sae: img("mess-logo.png")
                     };
      } else {
-       images = { ia: img("/games90s/segams-logo.png"),
-                  mame: img("/games90s/segams-logo.png"),
-                  mess: img("/games90s/segams-logo.png"),
+       images = { ia: img("segams-logo.png"),
+                  mame: img("segams-logo.png"),
+                  mess: img("segams-logo.png"),
                   dosbox: img("mess-logo.png"),
                   sae: img("mess-logo.png")
                 };
