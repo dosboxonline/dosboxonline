@@ -1474,4 +1474,3 @@ var Module = null;
 // legacy
 var JSMESS = JSMESS || {};
 JSMESS.ready = function (f) { f(); };
-1/Start-LCtrl 2-LAlt 1-Pause
