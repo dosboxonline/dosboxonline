@@ -840,7 +840,7 @@ var Module = null;
          return false;
        has_started = true;
        if (typeof options !== 'object') {
-         options = { waitAfterDownloading: false };
+         options = { waitAfterDownloading: true };
        }
 
        var k, c, game_data;
