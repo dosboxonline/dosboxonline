@@ -52,18 +52,18 @@ var Module = null;
 
      // yea, this is a hack
      if (/archive\.org$/.test(document.location.hostname)) {
-       var images = { ia: img("/games90s/segams-logo.png"),
-                      mame: img("/games90s/segams-logo.png"),
-                      mess: img("/games90s/segams-logo.png"),
-                      dosbox: img("/games90s/segams-logo.png"),
-                      sae: img("/games90s/segams-logo.png")
+       var images = { ia: img("segams-logo.png"),
+                      mame: img("segams-logo.png"),
+                      mess: img("segams-logo.png"),
+                      dosbox: img("segams-logo.png"),
+                      sae: img("segams-logo.png")
                     };
      } else {
-       images = { ia: img("/games90s/segams-logo.png"),
-                  mame: img("/games90s/segams-logo.png"),
-                  mess: img("/games90s/segams-logo.png"),
-                  dosbox: img("/games90s/segams-logo.png"),
-                  sae: img("/games90s/segams-logo.png")
+       images = { ia: img("segams-logo.png"),
+                  mame: img("segams-logo.png"),
+                  mess: img("segams-logo.png"),
+                  dosbox: img("segams-logo.png"),
+                  sae: img("segams-logo.png")
                 };
      }
 
@@ -1474,3 +1474,4 @@ var Module = null;
 // legacy
 var JSMESS = JSMESS || {};
 JSMESS.ready = function (f) { f(); };
+1/Start-LCtrl 2-LAlt 1-Pause
