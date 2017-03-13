@@ -1254,7 +1254,7 @@ var Module = null;
      var drawsplash = function () {
        canvas.setAttribute('moz-opaque', '');
        if (!splash.splashimg.src) {
-         splash.splashimg.src = "/games90s/segams-logo.png";
+         splash.splashimg.src = "";
        }
      };
 
