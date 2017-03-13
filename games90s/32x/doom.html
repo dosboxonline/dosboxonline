@@ -1,19 +1,20 @@
-<canvas id="canvas" style="width: 536px; height: 448; display: block; margin: 0 auto;"/>
+<canvas id="canvas" style="width: 640px; height: 448; display: block; margin: 0 auto;"/>
     <script type="text/javascript" src="/games90s/es6-promise.js"></script>
     <script type="text/javascript" src="/games90s/browserfs.js"></script>
     <script type="text/javascript" src="/games90s/segams/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new JSMESSLoader(JSMESSLoader.driver("sms"),
-                                                   JSMESSLoader.nativeResolution(268, 224),
-                                                   JSMESSLoader.emulatorJS("/games90s/mamesms.js"),
-                                                   JSMESSLoader.mountFile("ninja-gaiden.bin",
+                                  new MAMELoader(MAMELoader.driver("32x"),
+                                                   MAMELoader.nativeResolution(320, 224),
+                                                   MAMELoader.emulatorJS("/games90s/mamemegadriv.js"),
+                                                   MAMELoader.extraArgs("-nodrc")
+                                                   MAMELoader.mountFile("doom-e.32x",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/segams/games/ninja-gaiden.bin")),
-                                                   JSMESSLoader.mountFile("sms.cfg",
-                                                                          JSMESSLoader.fetchFile("Config File",
-                                                                                                 "/games90s/sms.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "ninja-gaiden.bin")))
+                                                                                                 "/games90s/32x/games/doom-e.32x")),
+                                                   MAMELoader.mountFile("sms.cfg",
+                                                                          MAMELoader.fetchFile("Config File",
+                                                                                                 "/games90s/32x.cfg")),
+                                                   "-nodrc".peripheral("cart", "doom-e.32x")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
     </script>
