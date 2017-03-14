@@ -1,5 +1,5 @@
 /**  The Emularity; easily embed emulators
-  *  Copyright © 2014-2016 Daniel Brooks <db48x@db48x.net>, Jason
+  *  Copyright Â© 2014-2016 Daniel Brooks <db48x@db48x.net>, Jason
   *  Scott <jscott@archive.org>, Grant Galitz <grantgalitz@gmail.com>,
   *  John Vilk <jvilk@cs.umass.edu>, and Tracey Jaquith <tracey@archive.org>
   *
@@ -1119,7 +1119,7 @@ var Module = null;
                                             }
                                           };
                             function success() {
-                              statusCell.textContent = "?";
+                              statusCell.textContent = "âœ”";
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
                               titleCell.parentNode.style.backgroundColor = splash.getColor('foreground');
@@ -1238,7 +1238,7 @@ var Module = null;
        var cell = row.insertCell(-1);
        cell.style.position = 'relative';
        var titleCell = document.createElement('span');
-       titleCell.textContent = '—';
+       titleCell.textContent = 'Â—';
        titleCell.style.verticalAlign = 'center';
        titleCell.style.minHeight = "24px";
        titleCell.style.whiteSpace = "nowrap";
