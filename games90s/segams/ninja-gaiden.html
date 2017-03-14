@@ -1,8 +1,8 @@
 1/Start-LCtrl 2-LAlt 1-Pause
 <canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"/>
-    <script type="text/javascript" src="/games90s/es6-promise.js"></script>
-    <script type="text/javascript" src="/games90s/browserfs.js"></script>
-    <script type="text/javascript" src="/games90s/segams/loadersms.js"></script>
+    <script type="text/javascript" src="/games90s/es6-promise.js" async></script>
+    <script type="text/javascript" src="/games90s/browserfs.js" async></script>
+    <script type="text/javascript" src="/games90s/segams/loadersms.js" async></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
@@ -17,4 +17,4 @@
                                                                                                  "/games90s/sms.cfg")),
                                                    JSMESSLoader.peripheral("cart", "ninjagaiden.bin")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
-    </script>
+    async</script>
