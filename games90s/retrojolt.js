@@ -3443,7 +3443,7 @@ var Module = null;
                 }
                 if (options.waitAfterDownloading) {
                     return new Promise(function (resolve, reject) {
-                        splash.setTitle("Click here to play");
+                        splash.setTitle("Click to play");
                         splash.spinning = false;
                         window.addEventListener('keypress', k = keyevent(resolve));
                         canvas.addEventListener('click', c = resolve);
