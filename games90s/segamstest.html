@@ -8,12 +8,12 @@
                                   new JSMESSLoader(JSMESSLoader.driver("nes"),
                                                    JSMESSLoader.nativeResolution(256, 240),
                                                    JSMESSLoader.emulatorJS("/games90s/mamenes.js"),
-                                                   JSMESSLoader.mountFile("contra-japan.nes",
+                                                   JSMESSLoader.mountFile("test.bin",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/nes/games/contra-japan.nes")),
+                                                                                                 "/games90s/nes/games/test.bin")),
                                                    JSMESSLoader.mountFile("nes.cfg",
                                                                           JSMESSLoader.fetchFile("Config File",
                                                                                                  "/games90s/nes.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "contra-japan.nes")))
+                                                   JSMESSLoader.peripheral("cart", "test.bin")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
    </script>
