@@ -951,7 +951,7 @@ var Module = null;
                       }
                       if (options.waitAfterDownloading) {
                         return new Promise(function (resolve, reject) {
-                                             splash.setTitle("Click here to play");
+                                             splash.setTitle("Click to play");
                                              splash.spinning = false;
 
                                              // stashes these event listeners so that we can remove them after
