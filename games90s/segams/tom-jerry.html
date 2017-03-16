@@ -9,12 +9,12 @@
                                   new JSMESSLoader(JSMESSLoader.driver("sms"),
                                                    JSMESSLoader.nativeResolution(268, 224),
                                                    JSMESSLoader.emulatorJS("/games90s/mamesms.js"),
-                                                   JSMESSLoader.mountFile("tom-jerry.bin",
+                                                   JSMESSLoader.mountFile("tom-jerry.sms",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/segams/games/tom-jerry.bin")),
+                                                                                                 "/games90s/segams/games/tom-jerry.sms")),
                                                    JSMESSLoader.mountFile("sms.cfg",
                                                                           JSMESSLoader.fetchFile("Config File",
                                                                                                  "/games90s/sms.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "tom-jerry.bin")))
+                                                   JSMESSLoader.peripheral("cart", "tom-jerry.sms")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
    </script>
