@@ -1,0 +1,20 @@
+1/Start-LCtrl 2-LAlt 1-Pause
+<canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"/>
+    <script type="text/javascript" src="/games90s/es6-promise.js"></script>
+    <script type="text/javascript" src="/games90s/browserfs.js"></script>
+    <script type="text/javascript" src="/games90s/segams/loadersms.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new JSMESSLoader(JSMESSLoader.driver("sms"),
+                                                   JSMESSLoader.nativeResolution(268, 224),
+                                                   JSMESSLoader.emulatorJS("/games90s/mamesms.js"),
+                                                   JSMESSLoader.mountFile("tom-jerry.sms",
+                                                                          JSMESSLoader.fetchFile("Game File",
+                                                                                                 "/games90s/segams/games/tom-jerry.sms")),
+                                                   JSMESSLoader.mountFile("sms.cfg",
+                                                                          JSMESSLoader.fetchFile("Config File",
+                                                                                                 "/games90s/sms.cfg")),
+                                                   JSMESSLoader.peripheral("cart", "tom-jerry.sms")))
+      emulator.setScale(2).start({ waitAfterDownloading: true });
+   </script>
