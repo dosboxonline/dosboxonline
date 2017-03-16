@@ -6,9 +6,9 @@
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
                                   new JSMESSLoader(JSMESSLoader.driver("32x"),
-                                                   JSMESSLoader.nativeResolution(640, 448),
+                                                   JSMESSLoader.nativeResolution(320, 224),
                                                    JSMESSLoader.extraArgs("-nodrc")
-                                                   JSMESSLoader.emulatorJS("/games90s/mamemegadriv.js"),
+                                                   JSMESSLoader.emulatorJS("/games90s/mamegenesis.js"),
                                                    JSMESSLoader.mountFile("32x.zip",
                                                                           JSMESSLoader.fetchFile("Bios",
                                                                                                  "/games90s/32x/32x.zip")),
