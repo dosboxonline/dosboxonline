@@ -1123,7 +1123,7 @@ var Module = null;
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
                               titleCell.parentNode.style.backgroundColor = splash.getColor('transparent');
-                              titleCell.parentNode.style.color = splash.getColor('transparent');
+                              titleCell.parentNode.style.color = splash.getColor('#333333');
                             }
                             function failure() {
                               statusCell.textContent = "?";
