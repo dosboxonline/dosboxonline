@@ -715,7 +715,7 @@ var Module = null;
      var has_started = false;
      var loading = false;
      var defaultSplashColors = { foreground: '#333333',
-                                 background: '#fafafa',
+                                 background: 'transparent',
                                  failure: '#990000' };
      var splash = { loading_text: "",
                     spinning: true,
@@ -1122,8 +1122,8 @@ var Module = null;
                               statusCell.textContent = "✔";
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
-                              titleCell.parentNode.style.backgroundColor = splash.getColor('foreground');
-                              titleCell.parentNode.style.color = splash.getColor('background');
+                              titleCell.parentNode.style.backgroundColor = splash.getColor('#333333');
+                              titleCell.parentNode.style.color = splash.getColor('transparent');
                             }
                             function failure() {
                               statusCell.textContent = "✘";
