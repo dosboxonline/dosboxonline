@@ -1122,8 +1122,8 @@ var Module = null;
                               statusCell.textContent = "✔";
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
-                              titleCell.parentNode.style.backgroundColor = splash.getColor('#333333');
-                              titleCell.parentNode.style.color = splash.getColor('#fafafa');
+                              titleCell.parentNode.style.backgroundColor = splash.getColor('#fafafa');
+                              titleCell.parentNode.style.color = splash.getColor('#333333');
                             }
                             function failure() {
                               statusCell.textContent = "✘";
