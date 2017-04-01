@@ -1,0 +1,7 @@
+{
+    "name": "Scripted Amiga Emulator",
+    "native_resolution": [640,480],
+    "extra_args": [""],
+    "js_filename": "scriptedamigaemulator.js.gz",
+    "driver":  "" 
+}
