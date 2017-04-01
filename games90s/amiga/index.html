@@ -1,0 +1,24 @@
+<canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"/>
+    <script type="text/javascript" src="/games90s/es6-promise.js"></script>
+    <script type="text/javascript" src="/games90s/browserfs.js"></script>
+    <script type="text/javascript" src="/games90s/segams/loadersms.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new SAELoader(SAELoader.model("A500"),
+                                                SAELoader.fastMemory(2),
+                                                SAELoader.nativeResolution(720, 568),
+                                                SAELoader.emulatorJS("/games90s/amiga/scriptedamigaemulator.js"),
+                                                SAELoader.mountFile("aros-amiga-m68k-rom.bin",
+                                                                    SAELoader.fetchFile("Bios",
+                                                                                        "/games90s/amiga/aros-amiga-m68k-rom.bin")),
+                                                SAELoader.mountFile("aros-amiga-m68k-ext.bin",
+                                                                    SAELoader.fetchFile("Bios",
+                                                                                        "/games90s/amiga/aros-amiga-m68k-ext.bin")),
+                                                SAELoader.rom(["aros-amiga-m68k-rom.bin", "aros-amiga-m68k-ext.bin"]),
+                                                SAELoader.mountFile("benefactor.adf",
+                                                                    SAELoader.fetchFile("Game",
+                                                                                        "/games90s/amiga/benefactor.adf")),
+                                                SAELoader.floppy(0, "benefactor")))
+      emulator.setScale(2).start({ waitAfterDownloading: true });
+    </script>
