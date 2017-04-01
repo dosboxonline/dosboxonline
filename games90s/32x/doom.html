@@ -1,19 +1,15 @@
-<canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"/>
-    <script type="text/javascript" src="/games90s/es6-promise.js"></script>
-    <script type="text/javascript" src="/games90s/browserfs.js"></script>
-    <script type="text/javascript" src="/games90s/segams/loadersms.js"></script>
-    <script type="text/javascript">
-      var emulator = new Emulator(document.querySelector("#canvas"),
-                                  null,
-                                  new JSMESSLoader(JSMESSLoader.driver("32x"),
-                                                   JSMESSLoader.nativeResolution(320, 224),
-                                                   JSMESSLoader.emulatorJS("/games90s/32x/mamemegadriv.js"),
-                                                   JSMESSLoader.mountFile("32x.zip",
-                                                                          JSMESSLoader.fetchFile("Bios",
-                                                                                                 "/games90s/32x/32x.zip")),
-                                                   JSMESSLoader.mountFile("doom.32x",
-                                                                          JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/32x/doom.32x")),
-                                                   JSMESSLoader.peripheral("cart", "doom.32x")))
-      emulator.setScale(2).start({ waitAfterDownloading: true });
-    </script>
+<canvas id="emulator-target" style="width: 640px; height: 448; display: block; margin: 0 auto;"></canvas>
+		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript">
+			var emulator = new RetroJolt( {
+				loadingImg: '/games90s/gen-logo.png',
+				scale: 2,
+				js: '/games90s/32x/mamemegadriv.js',
+				driver: '32x',
+                bios: [ '/games90s/32x/32x.zip' ],
+				cfg: '/games90s/genesis.cfg',
+				peripherals: [ 'cart' ],
+				resolution: [ 320, 224 ],
+				rom: '/games90s/32x/doom.32x',
+			} );
+		</script>
