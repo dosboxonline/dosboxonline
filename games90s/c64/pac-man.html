@@ -1,16 +1,16 @@
-<canvas id="emulator-target" style="width: 50%; height: 50%; display: block; margin: 0 auto;"></canvas>
+<canvas id="emulator-target" style="width: 836px; height: 470px; display: block; margin: 0 auto;"></canvas>
 		<script type="text/javascript" src="../../build/retrojolt.js"></script>
 		<script type="text/javascript">
 			var emulator = new RetroJolt( {
-				loadingImg: '../../src/loading.gif',
+				loadingImg: '/games90s/c64-logo.png',
 				scale: 2,
-				js: '../../drivers/mamec64.js',
+				js: '/games90s/mamec64.js',
 				driver: 'c64',
-				bios: [ './c64.zip', './c1541.zip' ],
-				cfg: '../../cfg/c64.cfg',
+				bios: [ '/games90s/c64.zip', '/games90s/c1541.zip' ],
+				cfg: '/games90s/c64.cfg',
 				peripherals: [ 'quik' ],
 				resolution: [ 418, 235 ],
-				rom: './sys4096.prg',
+				rom: '/games90s/c64/games/pac-man.nib',
 				args: ['-ab', 'sys4096\\n', "-autoboot_delay", "4" ],
 			} );
 		</script>
