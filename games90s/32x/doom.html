@@ -8,15 +8,12 @@
                                   new JSMESSLoader(JSMESSLoader.driver("32x"),
                                                    JSMESSLoader.nativeResolution(320, 224),
                                                    JSMESSLoader.emulatorJS("/games90s/mamemegadriv.js"),
-                                                   JSMESSLoader.mountFile("32x.bin",
+                                                   JSMESSLoader.mountFile("32x.zip",
                                                                           JSMESSLoader.fetchFile("Bios",
-                                                                                                 "/games90s/32x.bin")),
+                                                                                                 "/games90s/32x.zip")),
                                                    JSMESSLoader.mountFile("doom-e.32x",
                                                                           JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/32x/games/doom-e.32x")),
-                                                   JSMESSLoader.mountFile("32x.cfg",
-                                                                          JSMESSLoader.fetchFile("Config File",
-                                                                                                 "/games90s/32x.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "doom-e.32x")))
+                                                                                                 "/games90s/32x/games/doom.32x")),
+                                                   JSMESSLoader.peripheral("cart", "doom.32x")))
       emulator.setScale(2).start({ waitAfterDownloading: true });
     </script>
