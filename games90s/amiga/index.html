@@ -1,4 +1,4 @@
-<canvas id="canvas" style="width: 720px; height: 568px; display: block; margin: 0 auto;"/>
+<canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
     <script type="text/javascript" src="/games90s/amiga/es6-promise.js"></script>
     <script type="text/javascript" src="/games90s/amiga/browserfs.min.js"></script>
     <script type="text/javascript" src="/games90s/amiga/loader.js"></script>
@@ -16,9 +16,9 @@
                                                                     SAELoader.fetchFile("Bios",
                                                                                         "/games90s/amiga/aros-amiga-m68k-ext.bin")),
                                                 SAELoader.rom(["aros-amiga-m68k-rom.bin", "aros-amiga-m68k-ext.bin"]),
-                                                SAELoader.mountFile("robocop.adf",
+                                                SAELoader.mountFile("Cool_Demos_14.1_1989_Razor_1911.adf",
                                                                     SAELoader.fetchFile("Game",
-                                                                                        "/games90s/amiga/robocop.adf")),
-                                                SAELoader.floppy(0, "robocop")))
+                                                                                        "/games90s/amiga/Cool_Demos_14.1_1989_Razor_1911.adf")),
+                                                SAELoader.floppy(0, "Cool_Demos_14.1_1989_Razor_1911")))
       emulator.setScale(1).start({ waitAfterDownloading: true });
     </script>
