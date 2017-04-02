@@ -5,12 +5,13 @@
 				loadingImg: '/games90s/amstrad-logo.png',
 				scale: 2,
 				js: '/games90s/mameamstrad.js',
-				driver: 'cpc6128p',
+				driver: 'cpc6128',
 				cfg: '/games90s/amstrad.cfg',
 				bios: [ '/games90s/cpc6128.zip', '/games90s/cpc464.zip' ],
-				peripherals: [ 'cart' ],
+				peripherals: [ 'flop1' ],
 				resolution: [ 384, 272 ],
-				rom: '/games90s/amstrad/games/2.dsk',
+				rom: '/games90s/amstrad/games/1.dsk',
+				args: ['-ab', 'run"1\\n', "-autoboot_delay", "2" ],
 			} );
 		</script>
 Keys: LCtrl, LAlt, Space.
