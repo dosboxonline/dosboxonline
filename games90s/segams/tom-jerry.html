@@ -1,23 +1,16 @@
-1/Start-LCtrl 2-LAlt 1-Pause
-<canvas id="canvas" style="width: 536px; height: 448px; display: block; margin: 0 auto;"/>
-    <script type="text/javascript" src="/games90s/es6-promise.js"></script>
-    <script type="text/javascript" src="/games90s/browserfs.js"></script>
-    <script type="text/javascript" src="/games90s/segams/loadersms.js"></script>
-    <script type="text/javascript">
-      var emulator = new Emulator(document.querySelector("#canvas"),
-                                  null,
-                                  new JSMESSLoader(JSMESSLoader.driver("sms"),
-                                                   JSMESSLoader.nativeResolution(268, 224),
-                                                   JSMESSLoader.emulatorJS("/games90s/mamesms.js"),
-                                                   JSMESSLoader.mountFile("sms.zip",
-                                                                          JSMESSLoader.fetchFile("Bios",
-                                                                                                 "/games90s/sms.zip")),
-                                                   JSMESSLoader.mountFile("tom-jerry.bin",
-                                                                          JSMESSLoader.fetchFile("Game File",
-                                                                                                 "/games90s/segams/games/tom-jerry.bin")),
-                                                   JSMESSLoader.mountFile("sms.cfg",
-                                                                          JSMESSLoader.fetchFile("Config File",
-                                                                                                 "/games90s/sms.cfg")),
-                                                   JSMESSLoader.peripheral("cart", "tom-jerry.bin")))
-      emulator.setScale(2).start({ waitAfterDownloading: true });
-   </script>
+<canvas id="emulator-target" style="width: 536px; height: 448px; display: block; margin: 0 auto;"></canvas>
+		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript">
+			var emulator = new RetroJolt( {
+				loadingImg: '/games90s/segams-logo.png',
+				scale: 2,
+				js: '/games90s/mamesms.js',
+				driver: 'sms',
+				cfg: '/games90s/sms.cfg',
+				bios: [ '/games90s/sms.zip' ],
+				peripherals: [ 'cart' ],
+				resolution: [ 268, 224 ],
+				rom: '/games90s/segams/games/tom-jerry.bin',
+			} );
+		</script>
+Start-Enter 1-Z 2-X Pause-P
