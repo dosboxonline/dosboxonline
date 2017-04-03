@@ -1,13 +1,13 @@
 <canvas id="emulator-target" style="width: 488px; height: 432px; display: block; margin: 0 auto;"></canvas>
-		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript" src="/games90s/loader.js"></script>
 		<script type="text/javascript">
 			var emulator = new RetroJolt( {
-				loadingImg: '/games90s/gamegear-logo.png',
+				loadingImg: '/games90s/logo/gamegear.png',
 				scale: 3,
-				js: '/games90s/mamesms.js',
+				js: '/games90s/driver/segams.js',
 				driver: 'gamegear',
-				cfg: '/games90s/gamegear.cfg',
-				bios: [ '/games90s/gamegear.zip' ],
+				cfg: '/games90s/cfg/gamegear.cfg',
+				bios: [ '/games90s/bios/gamegear.zip' ],
 				peripherals: [ 'cart' ],
 				resolution: [ 160, 144 ],
 				rom: '/games90s/gamegear/games/road-rash.gg',

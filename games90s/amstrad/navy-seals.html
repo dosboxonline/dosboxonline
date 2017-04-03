@@ -1,16 +1,16 @@
 <canvas id="emulator-target" style="width: 768px; height: 544px; display: block; margin: 0 auto;"></canvas>
-		<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+		<script type="text/javascript" src="/games90s/loader.js"></script>
 		<script type="text/javascript">
 			var emulator = new RetroJolt( {
-				loadingImg: '/games90s/amstrad-logo.png',
+				loadingImg: '/games90s/logo/amstrad.png',
 				scale: 2,
-				js: '/games90s/mameamstrad.js',
+				js: '/games90s/driver/amstrad.js',
 				driver: 'cpc6128p',
-				cfg: '/games90s/amstrad.cfg',
-				bios: [ '/games90s/cpc6128.zip' ],
+				cfg: '/games90s/cfg/amstrad.cfg',
+				bios: [ '/games90s/bios/cpc6128.zip' ],
 				peripherals: [ 'cart' ],
 				resolution: [ 384, 272 ],
-				rom: '/games90s/amstrad/games/navyseals.zip',
+				rom: '/games90s/amstrad/games/navyseals.dsk',
 			} );
 		</script>
 Keys: LCtrl, LAlt, Space.

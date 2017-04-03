@@ -1,12 +1,12 @@
 <canvas id="emulator-target" style="width: 512px; height: 480px; display: block; margin: 0 auto;"></canvas>
-<script type="text/javascript" src="/games90s/retrojolt.js"></script>
+<script type="text/javascript" src="/games90s/loader.js"></script>
 <script type="text/javascript">
 			var emulator = new RetroJolt( {
-				loadingImg: '/games90s/nes-logo.png',
+				loadingImg: '/games90s/logo/nintendo.png',
 				scale: 2,
-				js: '/games90s/mamenes.js',
+				js: '/games90s/driver/nes.js',
 				driver: 'nes',
-				cfg: '/games90s/nes.cfg',
+				cfg: '/games90s/cfg/nes.cfg',
 				peripherals: [ 'cart' ],
 				resolution: [ 256, 240 ],
 				rom: '/games90s/nes/games/super-mario-bros.nes',
