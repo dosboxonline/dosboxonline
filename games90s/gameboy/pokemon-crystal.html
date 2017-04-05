@@ -1,8 +1,8 @@
 <canvas id="emulator-target" style="width: 488px; height: 432px; display: block; margin: 0 auto;"></canvas>
-		<script type="text/javascript" src="../../build/retrojolt.js"></script>
+		<script type="text/javascript" src="/games90s/loader.js"></script>
 		<script type="text/javascript">
 			var emulator = new RetroJolt( {
-				loadingImg: '/games90s/logo/gameboy.png',
+				loadingImg: '/games90s/logo/gbcolor.png',
 				scale: 3,
 				js: '/games90s/driver/gbc.js',
 				driver: 'gbcolor',
@@ -10,6 +10,6 @@
 				cfg: '/games90s/cfg/gbcolor.cfg',
 				peripherals: [ 'cart' ],
 				resolution: [ 160, 144 ],
-				rom: '/games90s/gameboy/games/pokemon-crystal.gbc',
+				rom: '/games90s/gbcolor/games/pokemon-crystal.gbc',
 			} );
 		</script>
