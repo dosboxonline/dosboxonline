@@ -12,7 +12,7 @@
                                                                          DosBoxLoader.fetchFile("Game File",
                                                                                                 "https://dosboxonline.github.io/w/Wolf3D.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
-      emulator.start({ waitAfterDownloading: true });
+      emulator.start({ waitAfterDownloading: false });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "https://dosboxonline.github.io/dosbox-sync.mem";
