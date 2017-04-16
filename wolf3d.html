@@ -1,13 +1,13 @@
     <canvas id="canvas" style="width: 640px; height: 400px; display: block; margin: 0 auto;"/>
         <script type="text/javascript" 
 
-src="https://dosboxonline.github.io/games/es6-promise.js"></script>
+src="https://dosboxonline.github.io/es6-promise.js"></script>
     <script type="text/javascript" 
 
-src="https://dosboxonline.github.io/games/browserfs.min.js"></script>
+src="https://dosboxonline.github.io/browserfs.min.js"></script>
     <script type="text/javascript" 
 
-src="https://dosboxonline.github.io/games/loader.js"></script>
+src="https://dosboxonline.github.io/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                  null,
@@ -20,7 +20,7 @@ src="https://dosboxonline.github.io/games/loader.js"></script>
                                                    DosBoxLoader.fetchFile("138 Mbytes",
                                                                                                 
 
-"https://dosboxonline.github.io/games/games/w/Wolf3D.zip")),
+"https://dosboxonline.github.io/w/Wolf3D.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
       emulator.start({ waitAfterDownloading: true })
     </script>
