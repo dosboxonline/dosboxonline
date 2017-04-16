@@ -1,29 +1,22 @@
-    <canvas id="canvas" style="width: 640px; height: 400px; display: block; margin: 0 auto;"/>
-        <script type="text/javascript" 
-
-src="https://dosboxonline.github.io/es6-promise.js"></script>
-    <script type="text/javascript" 
-
-src="https://dosboxonline.github.io/browserfs.min.js"></script>
-    <script type="text/javascript" 
-
-src="https://dosboxonline.github.io/loader.js"></script>
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+    <script type="text/javascript" src="https://dosboxonline.github.io/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
-                                 null,
-                                new DosBoxLoader(DosBoxLoader.emulatorJS
-
-("https://dosboxonline.github.io/dosbox.js"),
-                                                 
+                                  null,
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox-sync.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 400),
                                                    DosBoxLoader.mountZip("c",
-                                                   DosBoxLoader.fetchFile("1 Mbyte",
-                                                                                                
-
-"https://dosboxonline.github.io/w/Wolf3D.zip")),
+                                                                         DosBoxLoader.fetchFile("Game File",
+                                                                                                "https://dosboxonline.github.io/w/Wolf3D.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
-      emulator.start({ waitAfterDownloading: true })
+      emulator.start({ waitAfterDownloading: true });
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "https://dosboxonline.github.io/dosbox-sync.mem";
+        }
+        return "https://dosboxonline.github.io/"+ filename;
+      }
     </script>
-</div>
-</div>
-</div>
