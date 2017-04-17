@@ -1,5 +1,5 @@
-﻿/**  The Emularity; easily embed emulators
-  *  Copyright © 2014-2016 Daniel Brooks <db48x@db48x.net>, Jason
+/**  The Emularity; easily embed emulators
+  *  Copyright � 2014-2016 Daniel Brooks <db48x@db48x.net>, Jason
   *  Scott <jscott@archive.org>, Grant Galitz <grantgalitz@gmail.com>,
   *  John Vilk <jvilk@cs.umass.edu>, and Tracey Jaquith <tracey@archive.org>
   *
@@ -53,20 +53,20 @@ var Module = null;
      // yea, this is a hack
      var images;
      if (/archive\.org$/.test(document.location.hostname)) {
-       images = { ia: img("/images/ialogo.png"),
-                  mame: img("/images/mame.png"),
-                  mess: img("/images/mame.png"),
-                  dosbox: img("/images/dosbox.png"),
-                  sae: img("/images/sae.png"),
-                  pce: img("/images/pce.png")
+       images = { ia: img("https://dosboxonline.github.io/pixel.png"),
+                  mame: img("https://dosboxonline.github.io/pixel.png"),
+                  mess: img("https://dosboxonline.github.io/pixel.png"),
+                  dosbox: img("https://dosboxonline.github.io/pixel.png"),
+                  sae: img("https://dosboxonline.github.io/pixel.png"),
+                  pce: img("https://dosboxonline.github.io/pixel.png")
                 };
      } else {
-       images = { ia: img("other_logos/ia-logo-150x150.png"),
-                  mame: img("other_logos/mame.png"),
-                  mess: img("other_logos/mame.png"),
-                  dosbox: img("other_logos/dosbox.png"),
-                  sae: img("other_logos/sae.png"),
-                  pce: img("other_logos/pce.png")
+       images = { ia: img("https://dosboxonline.github.io/ia-logo-150x150.png"),
+                  mame: img("https://dosboxonline.github.io/pixel.png"),
+                  mess: img("https://dosboxonline.github.io/pixel.png"),
+                  dosbox: img("https://dosboxonline.github.io/pixel.png"),
+                  sae: img("https://dosboxonline.github.io/pixel.png"),
+                  pce: img("https://dosboxonline.github.io/pixel.png")
                 };
      }
 
@@ -1200,14 +1200,14 @@ var Module = null;
                                             }
                                           };
                             function success() {
-                              statusCell.textContent = "✔";
+                              statusCell.textContent = "?";
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
                               titleCell.parentNode.style.backgroundColor = splash.getColor('foreground');
                               titleCell.parentNode.style.color = splash.getColor('background');
                             }
                             function failure() {
-                              statusCell.textContent = "✘";
+                              statusCell.textContent = "?";
                               titleCell.textContent = title;
                               titleCell.style.fontWeight = 'bold';
                               titleCell.parentNode.style.backgroundColor = splash.getColor('failure');
@@ -1281,7 +1281,7 @@ var Module = null;
        splash.titleElt.style.marginBottom = "1em";
        splash.titleElt.style.textAlign = 'center';
        splash.titleElt.style.font = "24px sans-serif";
-       splash.titleElt.textContent = " ";
+       splash.titleElt.textContent = "�";
        splash.splashElt.appendChild(splash.titleElt);
 
        var table = document.getElementById("dosbox-progress-indicator");
@@ -1319,7 +1319,7 @@ var Module = null;
        var cell = row.insertCell(-1);
        cell.style.position = 'relative';
        var titleCell = document.createElement('span');
-       titleCell.textContent = '—';
+       titleCell.textContent = '�';
        titleCell.style.verticalAlign = 'center';
        titleCell.style.minHeight = "24px";
        titleCell.style.whiteSpace = "nowrap";
