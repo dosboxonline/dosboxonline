@@ -61,7 +61,7 @@ var Module = null;
                   pce: img("https://dosboxonline.github.io/pixel.png")
                 };
      } else {
-       images = { ia: img("https://dosboxonline.github.io/ia-logo-150x150.png"),
+       images = { ia: img("https://dosboxonline.github.io/pixel.png"),
                   mame: img("https://dosboxonline.github.io/pixel.png"),
                   mess: img("https://dosboxonline.github.io/pixel.png"),
                   dosbox: img("https://dosboxonline.github.io/pixel.png"),
