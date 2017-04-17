@@ -1,4 +1,4 @@
-/**  The Emularity; easily embed emulators
+﻿/**  The Emularity; easily embed emulators
   *  Copyright © 2014-2016 Daniel Brooks <db48x@db48x.net>, Jason
   *  Scott <jscott@archive.org>, Grant Galitz <grantgalitz@gmail.com>,
   *  John Vilk <jvilk@cs.umass.edu>, and Tracey Jaquith <tracey@archive.org>
