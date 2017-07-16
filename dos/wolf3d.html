@@ -9,7 +9,7 @@
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox.js"),
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosbox.online/dos/dosbox.js"),
                                                    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 400),
                                                    DosBoxLoader.mountZip("c",
@@ -19,9 +19,9 @@
       emulator.start({ waitAfterDownloading: false });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
-          return "https://dosboxonline.github.io/dosbox-sync.mem";
+          return "https://dosbox.online/dos/dosbox-sync.mem";
         }
-        return "https://dosboxonline.github.io/"+ filename;
+        return "https://dosbox.online/dos/"+ filename;
       }
     </script>
 <p><span style="color: #ad3a2b">Click on this text to enter the game. To unlock mouse press Esc key.</span></p>
