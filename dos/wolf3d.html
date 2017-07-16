@@ -1,0 +1,25 @@
+<div id="container" style="height: 100%; overflow: auto; width: 100%;">
+<div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
+<div id="contained" style="transform: translate(0px,0px);">
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
+    <script type="text/javascript" src="https://dosboxonline.github.io/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/loader.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
+                                                   DosBoxLoader.nativeResolution(640, 400),
+                                                   DosBoxLoader.mountZip("c",
+                                                                         DosBoxLoader.fetchFile("Game File",
+                                                                                                "https://dosbox.online/dos/w/wolf.zip")),
+                                                   DosBoxLoader.startExe("wolf.bat")))
+      emulator.start({ waitAfterDownloading: false });
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "https://dosboxonline.github.io/dosbox-sync.mem";
+        }
+        return "https://dosboxonline.github.io/"+ filename;
+      }
+    </script>
