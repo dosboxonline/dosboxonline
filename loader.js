@@ -56,7 +56,7 @@ var Module = null;
        images = { ia: img("/images/ialogo.png"),
                   mame: img("/images/mame.png"),
                   mess: img("/images/mame.png"),
-                  dosbox: img("/dosbox.png"),
+                  dosbox: img("https://dosboxonline.github.io/dosbox.png"),
                   sae: img("/images/sae.png"),
                   pce: img("/images/pce.png")
                 };
@@ -64,7 +64,7 @@ var Module = null;
        images = { ia: img("other_logos/ia-logo-150x150.png"),
                   mame: img("other_logos/mame.png"),
                   mess: img("other_logos/mame.png"),
-                  dosbox: img("/dosbox.png"),
+                  dosbox: img("https://dosboxonline.github.io/dosbox.png"),
                   sae: img("other_logos/sae.png"),
                   pce: img("other_logos/pce.png")
                 };
