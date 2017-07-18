@@ -1032,7 +1032,7 @@ var Module = null;
                       }
                       if (options.waitAfterDownloading) {
                         return new Promise(function (resolve, reject) {
-                                             splash.setTitle("Click to play");
+                                             splash.setTitle("Click                  to                  play");
                                              splash.spinning = false;
 
                                              // stashes these event listeners so that we can remove them after
@@ -1321,7 +1321,7 @@ var Module = null;
        var titleCell = document.createElement('span');
        titleCell.textContent = '—';
        titleCell.style.verticalAlign = 'center';
-       titleCell.style.minHeight = "728px";
+       titleCell.style.minHeight = "24px";
        titleCell.style.whiteSpace = "nowrap";
        cell.appendChild(titleCell);
        var statusCell = document.createElement('span');
