@@ -1,0 +1,29 @@
+ 1 <!doctype html>
+ 2   <html lang="en-us">
+ 3     <head>
+ 4       <meta charset="utf-8">
+ 5       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 6       <title>js-dos api</title>
+ 7       <style type="text/css">
+ 8         .dosbox-container { width: 640px; height: 480px; }
+ 9       </style>
+10     </head>
+11     <body>
+12       <div id="dosbox"></div>
+13       <br/>
+14       <button onclick="dosbox.requestFullScreen();">Make fullscreen</button>
+15       
+16       <script type="text/javascript" src="/dosbox/js-dos-api.js"></script>
+17       <script type="text/javascript">
+18         var dosbox = new Dosbox({
+19           id: "dosbox",
+20           onload: function (dosbox) {
+21             dosbox.run("/dosbox/duke3d.zip", "./duke.bat");
+22           },
+23           onrun: function (dosbox, app) {
+24             console.log("App '" + app + "' is runned");
+25           }
+26         });
+27       </script>
+28     </body>
+29   </html>
