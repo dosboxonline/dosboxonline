@@ -3,24 +3,24 @@
 <div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
 <div id="contained" style="transform: translate(0px,0px);">
     <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>
-    <script type="text/javascript" src="https://roms.retrogames.onl/dosbox/es6-promise.js"></script>
-    <script type="text/javascript" src="https://roms.retrogames.onl/dosbox/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/browserfs.min.js"></script>
     <script type="text/javascript" src="https://dosboxonline.github.io/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://roms.retrogames.onl/dosbox/dosbox.js"),
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox/dosbox.js"),
                                                    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 480),
                                                    DosBoxLoader.mountZip("c",
                                                                          DosBoxLoader.fetchFile("Game File",
-                                                                                                "https://roms.retrogames.onl/dosbox/nfs11.zip")),
-                                                   DosBoxLoader.startExe("nfs11.bat")))
+                                                                                                "https://dosboxonline.github.io/dosbox/wolf4.zip")),
+                                                   DosBoxLoader.startExe("wolf4.bat")))
       emulator.start({ waitAfterDownloading: true });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "https://dosboxonline.github.io/dosbox-sync.mem";
         }
-        return "https://roms.retrogames.onl/dosbox/"+ filename;
+        return "https://dosboxonline.github.io/dosbox/"+ filename;
       }
     </script>
