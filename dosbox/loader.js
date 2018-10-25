@@ -1549,7 +1549,7 @@ var Module = null;
        splash.titleElt.classList.add("emularity-splash-title");
        if (!globalOptions.hasCustomCSS) {
          splash.titleElt.style.display = 'block';
-         splash.titleElt.style.width = '728';
+         splash.titleElt.style.width = '640';
          splash.titleElt.style.marginTop = "1em";
          splash.titleElt.style.marginBottom = "1em";
          splash.titleElt.style.textAlign = 'center';
@@ -1564,7 +1564,7 @@ var Module = null;
          table.classList.add("emularity-progress-indicator");
          table.dataset.hasCustomCSS = globalOptions.hasCustomCSS;
          if (!globalOptions.hasCustomCSS) {
-           table.style.width = "75%";
+           table.style.width = "640";
            table.style.color = splash.getColor('foreground');
            table.style.backgroundColor = splash.getColor('background');
            table.style.marginLeft = 'auto';
