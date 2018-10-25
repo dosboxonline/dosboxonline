@@ -22,10 +22,10 @@
                                                    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 400),
                                                    DosBoxLoader.mountZip("c",
-                                                                         DosBoxLoader.fetchFile("Game File",
+                                                                         DosBoxLoader.fetchFile("Wolfenstein 3D",
                                                                                                 "https://roms.retrogames.onl/dos/w/wolf3d.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
-      emulator.start({ waitAfterDownloading: false });
+      emulator.start({ waitAfterDownloading: true });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "https://dosboxonline.github.io/dosbox/dosbox-sync.html.mem";
