@@ -1047,7 +1047,7 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'red',
+     var defaultSplashColors = { foreground: '#ad3a2b',
                                  background: 'transparent',
                                  failure: 'red' };
      var splash = { loading_text: "",
@@ -1553,7 +1553,7 @@ var Module = null;
          splash.titleElt.style.marginTop = "1em";
          splash.titleElt.style.marginBottom = "1em";
          splash.titleElt.style.textAlign = 'center';
-         splash.titleElt.style.font = "18px sans-serif";
+         splash.titleElt.style.font = "18px verdana";
        }
        splash.titleElt.textContent = " ";
        splash.splashElt.appendChild(splash.titleElt);
@@ -1565,7 +1565,7 @@ var Module = null;
          table.dataset.hasCustomCSS = globalOptions.hasCustomCSS;
          if (!globalOptions.hasCustomCSS) {
            table.style.width = "640";
-           table.style.color = splash.getColor('foreground');
+           table.style.color = splash.getColor('background');
            table.style.backgroundColor = splash.getColor('background');
            table.style.marginLeft = 'auto';
            table.style.marginRight = 'auto';
