@@ -8,13 +8,13 @@
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox/dosbox.js"),
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox/dosbox-sync.js"),
                                                    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 400),
                                                    DosBoxLoader.mountZip("c",
                                                                          DosBoxLoader.fetchFile("Downloading",
-                                                                                                "https://roms.retrogames.onl/dos/b/burnc3.zip")),
-                                                   DosBoxLoader.startExe("burnc4.bat")))
+                                                                                                "https://roms.retrogames.onl/dos/b/burnc.zip")),
+                                                   DosBoxLoader.startExe("burnc.bat")))
       emulator.start({ waitAfterDownloading: true });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
