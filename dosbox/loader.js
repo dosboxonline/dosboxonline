@@ -1047,7 +1047,8 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'white',
+     var defaultSplash
+    s = { foreground: 'white',
                                  background: 'black',
                                  failure: 'red' };
      var splash = { loading_text: "",
@@ -1549,11 +1550,11 @@ var Module = null;
        splash.titleElt.classList.add("emularity-splash-title");
        if (!globalOptions.hasCustomCSS) {
          splash.titleElt.style.display = 'block';
-         splash.titleElt.style.width = '100%';
+         splash.titleElt.style.width = '728';
          splash.titleElt.style.marginTop = "1em";
          splash.titleElt.style.marginBottom = "1em";
          splash.titleElt.style.textAlign = 'center';
-         splash.titleElt.style.font = "24px sans-serif";
+         splash.titleElt.style.font = "20px sans-serif";
        }
        splash.titleElt.textContent = " ";
        splash.splashElt.appendChild(splash.titleElt);
