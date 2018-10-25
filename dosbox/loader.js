@@ -1549,11 +1549,11 @@ var Module = null;
        splash.titleElt.classList.add("emularity-splash-title");
        if (!globalOptions.hasCustomCSS) {
          splash.titleElt.style.display = 'block';
-         splash.titleElt.style.width = '100%';
+         splash.titleElt.style.width = '728';
          splash.titleElt.style.marginTop = "1em";
          splash.titleElt.style.marginBottom = "1em";
          splash.titleElt.style.textAlign = 'center';
-         splash.titleElt.style.font = "24px sans-serif";
+         splash.titleElt.style.font = "18px sans-serif";
        }
        splash.titleElt.textContent = " ";
        splash.splashElt.appendChild(splash.titleElt);
