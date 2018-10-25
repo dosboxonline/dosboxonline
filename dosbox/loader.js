@@ -1047,8 +1047,8 @@ var Module = null;
      // TODO: Have an enum value that communicates the current state of the emulator, e.g. 'initializing', 'loading', 'running'.
      var has_started = false;
      var loading = false;
-     var defaultSplashColors = { foreground: 'white',
-                                 background: 'black',
+     var defaultSplashColors = { foreground: 'red',
+                                 background: 'transparent',
                                  failure: 'red' };
      var splash = { loading_text: "",
                     spinning: true,
@@ -1357,7 +1357,7 @@ var Module = null;
                       }
 
                       if (game_data.emulatorJS) {
-                        splash.setTitle("Launching Emulator");
+                        splash.setTitle("Esc key - unlock mouse");
                         return attach_script(game_data.emulatorJS);
                       } else {
                         splash.setTitle("Non-system disk or disk error");
@@ -1570,7 +1570,7 @@ var Module = null;
            table.style.marginLeft = 'auto';
            table.style.marginRight = 'auto';
            table.style.borderCollapse = 'separate';
-           table.style.borderSpacing = "2px";
+           table.style.borderSpacing = "0px";
          }
          splash.splashElt.appendChild(table);
        }
@@ -1605,7 +1605,7 @@ var Module = null;
        titleCell.textContent = '—';
        if (needsCSS) {
          titleCell.style.verticalAlign = 'center';
-         titleCell.style.minHeight = "24px";
+         titleCell.style.minHeight = "18px";
          titleCell.style.whiteSpace = "nowrap";
        }
        cell.appendChild(titleCell);
