@@ -1049,7 +1049,7 @@ var Module = null;
      var loading = false;
      var defaultSplashColors = { foreground: '#ad3a2b',
                                  background: 'transparent',
-                                 failure: 'red' };
+                                 failure: '#ad3a2b' };
      var splash = { loading_text: "",
                     spinning: true,
                     finished_loading: false,
@@ -1467,7 +1467,7 @@ var Module = null;
                               titleCell.textContent = title;
                               if (needsCSS) {
                                 titleCell.style.fontWeight = 'bold';
-                                titleCell.parentNode.style.backgroundColor = splash.getColor('background');
+                                titleCell.parentNode.style.backgroundColor = splash.getColor('foregraund');
                                 titleCell.parentNode.style.color = splash.getColor('background');
                               }
                             }
