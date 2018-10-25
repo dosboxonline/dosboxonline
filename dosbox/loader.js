@@ -1467,7 +1467,7 @@ var Module = null;
                               titleCell.textContent = title;
                               if (needsCSS) {
                                 titleCell.style.fontWeight = 'bold';
-                                titleCell.parentNode.style.backgroundColor = splash.getColor('foregraund');
+                                titleCell.parentNode.style.backgroundColor = splash.getColor('background');
                                 titleCell.parentNode.style.color = splash.getColor('background');
                               }
                             }
@@ -1565,7 +1565,7 @@ var Module = null;
          table.dataset.hasCustomCSS = globalOptions.hasCustomCSS;
          if (!globalOptions.hasCustomCSS) {
            table.style.width = "640";
-           table.style.color = splash.getColor('background');
+           table.style.color = splash.getColor('foreground');
            table.style.backgroundColor = splash.getColor('background');
            table.style.marginLeft = 'auto';
            table.style.marginRight = 'auto';
