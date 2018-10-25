@@ -1554,7 +1554,7 @@ var Module = null;
          splash.titleElt.style.marginTop = "1em";
          splash.titleElt.style.marginBottom = "1em";
          splash.titleElt.style.textAlign = 'center';
-         splash.titleElt.style.font = "20px sans-serif";
+         splash.titleElt.style.font = "20px verdana";
        }
        splash.titleElt.textContent = " ";
        splash.splashElt.appendChild(splash.titleElt);
