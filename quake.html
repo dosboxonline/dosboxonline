@@ -1,19 +1,25 @@
-﻿<body>
-    <APPLET CODE="jdos.gui.MainApplet" archive='jdosbox.jar' WIDTH=640 HEIGHT=480
-        codebase="https://dosboxonline.github.io/">
-    <param value="true" name="separate_jvm">
-    <param name="download1" value="https://dosbox.online/games/q/quake/Quake.zip">
-    <param name="download1" value="https://dosbox.online/games/q/quake/Quake.zip">
-    <param name="download2" value="https://dosbox.online/games/q/quake/QuakeCFG.zip">
-    <param name="download2" value="https://dosbox.online/games/q/quake/QuakeCFG.zip">
-    <param name="param1" value="-conf ~/.jdosbox/QuakeCFG/QuakeCFG.conf">
-    <param name="background-color" value="#000000">
-   </APPLET>
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>&nbsp;</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Game not run in Chrome and Firefox browsers</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Switch to a Java-compatible browser - Internet Explorer, Safari</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong>Requires Java - https://www.java.com/</strong></span></span></span></p>
-</body>
+<div id="container" style="height: 100%; overflow: auto; width: 100%;">
+<div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
+<div id="contained" style="transform: translate(0px,0px);">
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>    
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/loader.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox/dosbox-sync.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
+                                                   DosBoxLoader.nativeResolution(640, 400),
+                                                   DosBoxLoader.mountZip("c",
+                                                                         DosBoxLoader.fetchFile("Quake",
+                                                                                                "https://roms.retrogames.onl/dos/q/quake1.zip")),
+                                                   DosBoxLoader.startExe("quake1.bat")))
+      emulator.start({ waitAfterDownloading: true });
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "https://dosboxonline.github.io/dosbox/dosbox-sync.html.mem";
+        }
+        return "https://dosboxonline.github.io/dosbox/"+ filename;
+      }
+    </script>
