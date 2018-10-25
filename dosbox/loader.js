@@ -1467,7 +1467,7 @@ var Module = null;
                               titleCell.textContent = title;
                               if (needsCSS) {
                                 titleCell.style.fontWeight = 'bold';
-                                titleCell.parentNode.style.backgroundColor = splash.getColor('foreground');
+                                titleCell.parentNode.style.backgroundColor = splash.getColor('background');
                                 titleCell.parentNode.style.color = splash.getColor('background');
                               }
                             }
