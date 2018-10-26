@@ -5,15 +5,15 @@
         width: 640px;
     }
 </style>
-<div id="container" style="height: 100%; overflow: auto; width: 100%;">
+<div id="container" style="height: 456; overflow: auto; width: 728;">
 <div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
-<div id="contained" style="transform: translate(0px,0px);">       
+<div id="contained" style="transform: translate(0px,0px);">   <div class="onl">     
     <canvas id="canvas" style="width: 100%; height: 100%; display: block; margin: 0 auto;"/> 
       
     <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/es6-promise.js"></script>
     <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/browserfs.min.js"></script>
     <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/loader.js"></script>
-  <div class="onl"> 
+  
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
@@ -31,4 +31,4 @@
         }
         return "https://dosboxonline.github.io/dosbox/"+ filename;
       }
-    </script></div>EvolutionDino Dudes
+    </script></div>Evolution Dino Dudes
