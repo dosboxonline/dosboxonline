@@ -22,7 +22,7 @@
                                                                          DosBoxLoader.fetchFile("Downloading",
                                                                                                 "https://roms.retrogames.onl/dos/n/nt11.zip")),
                                                    DosBoxLoader.startExe("nt11.bat")))
-      emulator.start({ waitAfterDownloading: true });
+      emulator.start({ waitAfterDownloading: false });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "https://dosboxonline.github.io/dosbox/dosbox-sync.mem";
