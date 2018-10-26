@@ -25,7 +25,7 @@
                                                                          DosBoxLoader.fetchFile("Downloading",
                                                                                                 "https://roms.retrogames.onl/dos/w/wolf3d.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
-      emulator.start({ waitAfterDownloading: true });
+      emulator.start({ waitAfterDownloading: false });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "https://dosboxonline.github.io/dosbox/dosbox-sync.html.mem";
