@@ -9,13 +9,13 @@
 <div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
 <div id="contained" style="transform: translate(0px,0px);">
     <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>    
-    <script type="text/javascript" src="/dosbox/es6-promise.js"></script>
-    <script type="text/javascript" src="/dosbox/browserfs.min.js"></script>
-    <script type="text/javascript" src="/dosbox/loader.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/loader.js"></script>
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new DosBoxLoader(DosBoxLoader.emulatorJS("/dosbox/dosbox-sync.js"),
+                                   new DosBoxLoader(DosBoxLoader.emulatorJS("/dosbox/dosbox-sync.js"),
                                                    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 480),
                                                    DosBoxLoader.mountZip("c",
