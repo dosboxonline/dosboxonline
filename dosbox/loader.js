@@ -1357,7 +1357,7 @@ var Module = null;
                       }
 
                       if (game_data.emulatorJS) {
-                        splash.setTitle("Esc key - unlock mouse");
+                        splash.setTitle("Starting game");
                         return attach_script(game_data.emulatorJS);
                       } else {
                         splash.setTitle("Non-system disk or disk error");
