@@ -22,7 +22,7 @@
                                                                          DosBoxLoader.fetchFile("Downloading",
                                                                                                 "https://roms.retrogames.onl/dos/t/torins-passage.zip")),
                                                    DosBoxLoader.startExe("torrin.bat")))
-      emulator.start({ waitAfterDownloading: true });
+      emulator.start({ waitAfterDownloading: false });
       function locateAdditionalFiles(filename) {
         if (filename === "dosbox.html.mem") {
           return "/dosbox/dosbox-sync.mem";
