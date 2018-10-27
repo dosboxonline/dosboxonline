@@ -1,19 +1,32 @@
-<body>
-     <APPLET CODE="jdos.gui.MainApplet" archive='jdosbox.jar' WIDTH=640 HEIGHT=480
-        codebase="https://dosboxonline.github.io/">
-    <param value="true" name="separate_jvm">
-    <param name="download1" value="https://dosbox.online/games/h/hell/Hell.zip">
-    <param name="download1" value="https://dosbox.online/games/h/hell/Hell.zip">
-    <param name="download2" value="https://dosbox.online/games/h/hell/HellCFG.zip">
-    <param name="download2" value="https://dosbox.online/games/h/hell/HellCFG.zip">
-    <param name="param1" value="-conf ~/.jdosbox/HellCFG/HellCFG.conf">
-<param name="background-color" value="#000000" />
-</applet>
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>&nbsp;</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Game not run in Chrome and Firefox browsers</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Switch to a Java-compatible browser - Internet Explorer, Safari</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong>Requires Java - https://www.java.com/</strong></span></span></span></p>
-</body>
+      <style>
+.onl
+{
+        height: 546px;
+        width: 728px;
+    }
+</style>   <div class="onl"> 
+<div id="container" style="height: 100%; overflow: hidden; width: 100%;">
+<div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
+<div id="contained" style="transform: translate(0px,0px);">
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/>    
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/es6-promise.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/browserfs.min.js"></script>
+    <script type="text/javascript" src="https://dosboxonline.github.io/dosbox/loader.js"></script>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("https://dosboxonline.github.io/dosbox/dosbox-sync.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
+                                                   DosBoxLoader.nativeResolution(640, 480),
+                                                   DosBoxLoader.mountZip("c",
+                                                                         DosBoxLoader.fetchFile("Downloading",
+                                                                                                "https://roms.retrogames.onl/dos/h/hell.zip")),
+                                                   DosBoxLoader.startExe("hell1.bat")))
+      emulator.start({ waitAfterDownloading: false });
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "https://dosboxonline.github.io/dosbox/dosbox-sync.mem";
+        }
+        return "https://dosboxonline.github.io/dosbox/"+ filename;
+      }
+    </script></div></div></div></div><span style="font-family: &quot;verdana&quot; , sans-serif; font-size: 14px;"><span style="color: #ad3a2b;"><font size="2">Click on this text to enter the game</span></span></font>
