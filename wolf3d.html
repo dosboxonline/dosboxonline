@@ -18,12 +18,18 @@
     <script type="text/javascript">
       var emulator = new Emulator(document.querySelector("#canvas"),
                                   null,
-                                  new DosBoxLoader(DosBoxLoader.emulatorWASM("/dosbox/dosbox.wasm"),
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("/dosbox/dosbox-sync.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
                                                    DosBoxLoader.nativeResolution(640, 400),
                                                    DosBoxLoader.mountZip("c",
                                                                          DosBoxLoader.fetchFile("Downloading",
                                                                                                 "https://roms.retrogames.onl/dos/w/wolf3d.zip")),
                                                    DosBoxLoader.startExe("wolf.bat")))
       emulator.start({ waitAfterDownloading: false });
-     
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "/dosbox/dosbox-sync.html.mem";
+        }
+        return "/dosbox/"+ filename;
+      }
     </script></div></div></div></div><span style="font-family: &quot;verdana&quot; , sans-serif; font-size: 14px;"><span style="color: #ad3a2b;"><font size="2">Click on this text to enter the game</span></span></font>
