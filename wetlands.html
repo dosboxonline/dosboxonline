@@ -1,19 +1,35 @@
-<body>
-<APPLET CODE="jdos.gui.MainApplet" archive='jdosbox.jar' WIDTH=640 HEIGHT=400
- codebase="https://dosboxonline.github.io/">
-    <param value="true" name="separate_jvm">
-    <param name="download1" value="https://dosbox.online/games/w/wetlands/Wetlands.zip">
-    <param name="download1" value="https://dosbox.online/games/w/wetlands/Wetlands.zip">
-    <param name="download2" value="https://dosbox.online/games/w/wetlands/WetlandsCFG.zip">
-    <param name="download2" value="https://dosbox.online/games/w/wetlands/WetlandsCFG.zip">
-    <param name="background-color" value="#000000">
-    <param name="param1" value="-conf ~/.jdosbox/WetlandsCFG/WetlandsCFG.conf">
-   </APPLET>
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>&nbsp;</span></strong></span></span></span></p>
+<style>
+.onl
+{
+        height: 456px;
+        width: 728px;
+    }
+</style>  
+  <div class="onl"> 
+<div id="container" style="height: 100%; overflow: hidden; width: 100%;">
+<div id="contained" style="height: 0px; transform: scale(1.1375); width: 0px;">
+<div id="contained" style="transform: translate(0px,0px);">     
+    <canvas id="canvas" style="width: 50%; height: 50%; display: block; margin: 0 auto;"/> 
+      
+    <script type="text/javascript" src="/dosbox/es6-promise.js"></script>
+    <script type="text/javascript" src="/dosbox/browserfs.min.js"></script>
+    <script type="text/javascript" src="/dosbox/loader.js"></script>
 
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Game not run in Chrome and Firefox browsers</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong><span>Switch to a Java-compatible browser - Internet Explorer, Safari</span></strong></span></span></span></p>
-
-<p style="text-align: center"><span style="font-size: 16px"><span style="color: #ff0000"><span style="font-family: arial,helvetica,sans-serif"><strong>Requires Java - https://www.java.com/</strong></span></span></span></p>
-</body>
+    <script type="text/javascript">
+      var emulator = new Emulator(document.querySelector("#canvas"),
+                                  null,
+                                  new DosBoxLoader(DosBoxLoader.emulatorJS("/dosbox/dosbox-sync.js"),
+                                                   DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
+                                                   DosBoxLoader.nativeResolution(640, 400),
+                                                   DosBoxLoader.mountZip("c",
+                                                                         DosBoxLoader.fetchFile("Downloading",
+                                                                                                "https://roms.retrogames.onl/dos/w/wetlands.zip")),
+                                                   DosBoxLoader.startExe("wetland.bat")))
+      emulator.start({ waitAfterDownloading: false });
+      function locateAdditionalFiles(filename) {
+        if (filename === "dosbox.html.mem") {
+          return "/dosbox/dosbox-sync.html.mem";
+        }
+        return "/dosbox/"+ filename;
+      }
+    </script></div></div></div></div><span style="font-family: &quot;verdana&quot; , sans-serif; font-size: 14px;"><span style="color: #ad3a2b;"><font size="2">Click on this text to enter the game</span></span></font>
