@@ -1504,7 +1504,7 @@ var Module = null;
          canvas.style.imageRendering = '-webkit-optimize-contrast';
          canvas.style.imageRendering = 'optimize-contrast';
          canvas.style.imageRendering = 'crisp-edges';
-         canvas.style.imageRendering = 'pixelated';
+         canvas.style.imageRendering = 'auto';
          canvas.style.imageRendering = 'optimizeSpeed';
 
          canvas.style.width = resolution.width * scale +'px';
