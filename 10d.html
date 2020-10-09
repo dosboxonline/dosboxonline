@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <style>
+         html, body, #jsdos {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
+        <script src="https://js-dos.com/v7/build/releases/latest/emulators/emulators.js"></script>
+        <script src="https://js-dos.com/v7/build/releases/latest/emulators-ui/emulators-ui.js"></script>
+        <link rel="stylesheet" href="https://js-dos.com/v7/build/releases/latest/emulators-ui/emulators-ui.css">
+    </head>
+    <body>
+        <div id="jsdos" />
+        <script>
+         emulators.pathPrefix = "https://js-dos.com/v7/build/releases/latest/js-dos/";
+         Dos(document.getElementById("jsdos"))
+             .run("/wolf3d.jsdos");
+        </script>
+    </body>
+</html>
